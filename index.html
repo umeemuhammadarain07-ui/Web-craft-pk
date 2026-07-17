@@ -3,188 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WebCraft PK - #1 Premium Web Design & Development Agency in Pakistan. We build responsive, SEO optimized websites for School, Shop, Salon, Academy. Order on WhatsApp.">
-    <meta name="keywords" content="web design pakistan, website development, school website, shop website, salon website, webcraft pk">
     <title>WebCraft PK | Premium Web Design & Development Agency in Pakistan</title>
     <link rel="icon" href="https://i.imgur.com/4LwQ9pV.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
         *{margin:0; padding:0; box-sizing:border-box;}
         html {scroll-behavior: smooth;}
-        body {
-            font-family: 'Inter', sans-serif; 
-            background: #ffffff url('https://i.imgur.com/4LwQ9pV.png') no-repeat center fixed;
-            background-size: cover;
-            color:#1a1a1a;
-        }
+        body {font-family: 'Inter', sans-serif; background: #ffffff url('https://i.imgur.com/4LwQ9pV.png') no-repeat center fixed; background-size: cover; color:#1a1a1a;}
         .overlay {background:rgba(255,255,255,0.96); min-height:100vh;}
         .navbar {background:rgba(255,255,255,0.92); backdrop-filter: blur(15px); padding:20px 8%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 4px 25px rgba(0,0,0,0.06);}
-        .logo {font-size:30px; font-weight:900; color:#0A2540; letter-spacing:-1px;}
+        .logo {font-size:30px; font-weight:900; color:#0A2540;}
         .logo span {color:#0052FF;}
-        .nav-links {display:flex;}
-        .nav-links a {color:#333; text-decoration:none; margin:0 22px; font-weight:600; font-size:16px; transition:0.3s;}
-        .nav-links a:hover {color:#0052FF;}
-        .nav-btn {background:linear-gradient(90deg, #0052FF, #00A3FF); color:#fff; padding:14px 30px; border-radius:10px; text-decoration:none; font-weight:700; transition:0.3s; box-shadow:0 4px 15px rgba(0,82,255,0.3);}
-        .nav-btn:hover {transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,82,255,0.4);}
-        .menu-icon {display:none; font-size:28px; cursor:pointer;}
-        .hero {padding:150px 8%; text-align:center; background: linear-gradient(135deg, rgba(10,37,64,0.90) 0%, rgba(0,82,255,0.90) 100%); color:#fff;}
-        .hero h1 {font-size:70px; font-weight:900; line-height:1.1; margin-bottom:25px;}
-        .hero p {font-size:22px; max-width:800px; margin:0 auto 45px; color:#E8F0FE; font-weight:300;}
-        .hero-btns {display:flex; justify-content:center; gap:20px; flex-wrap:wrap;}
-        .btn-primary {background:#fff; color:#0052FF; padding:20px 40px; border-radius:12px; text-decoration:none; font-weight:800; font-size:18px; transition:0.3s; box-shadow:0 8px 25px rgba(255,255,255,0.2);}
-        .btn-outline {border:2px solid #fff; color:#fff; padding:20px 40px; border-radius:12px; text-decoration:none; font-weight:800; font-size:18px; transition:0.3s;}
-        .btn-primary:hover {transform:translateY(-4px); box-shadow:0 12px 30px rgba(255,255,255,0.3);}
-        .btn-outline:hover {background:#fff; color:#0052FF; transform:translateY(-4px);}
-        .section {padding:110px 8%; max-width:1400px; margin:auto;}
-        .section-subtitle {color:#0052FF; font-weight:700; text-align:center; margin-bottom:15px; font-size:15px; letter-spacing:2.5px; text-transform:uppercase;}
-        .section-title {text-align:center; font-size:46px; font-weight:900; margin-bottom:70px; color:#0A2540;}
-        .grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px;}
+        .grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; padding:80px 8%;}
         .card {background:#fff; border:1px solid #EB; border-radius:20px; padding:0; overflow:hidden; transition:0.4s; box-shadow:0 10px 40px rgba(0,0,0,0.05);}
-        .card:hover {transform: translateY(-12px); box-shadow:0 25px 60px rgba(0,82,255,0.15);}
         .card-img {width:100%; height:240px; object-fit:cover;}
         .card-content {padding:35px 30px;}
-        .card h3 {font-size:24px; color:#0A2540; margin-bottom:12px; font-weight:800;}
-        .card p {color:#5A5A5A; line-height:1.7; margin-bottom:20px; font-size:15px;}
-        .price-wrap {display:flex; align-items:center; gap:12px; margin:18px 0;}
         .price {font-size:32px; font-weight:900; color:#0052FF;}
-        .old-price {color:#999; text-decoration:line-through; font-size:16px;}
-        .payment {background:#F0F7FF; color:#0052FF; padding:12px; border-radius:10px; font-size:13px; font-weight:700; margin-bottom:20px; text-align:center;}
-        .btn-order {padding:16px; border-radius:12px; text-decoration:none; display:block; margin-top:12px; font-weight:700; font-size:16px; text-align:center; transition:0.3s;}
+        .btn-order {padding:16px; border-radius:12px; text-decoration:none; display:block; margin-top:12px; font-weight:700; font-size:16px; text-align:center;}
         .btn-wa {background:#25D366; color:#fff;}
         .btn-mail {background:#0A2540; color:#fff;}
-        .btn-order:hover {transform:scale(1.05);}
-        .why-us {background:#F7F9FC; border-radius:24px; padding:90px 60px; text-align:center; margin-top:80px;}
-        .features-grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:40px; margin-top:50px;}
-        .feature {text-align:left; background:#fff; padding:35px; border-radius:16px; border:1px solid #EB; transition:0.3s;}
-        .feature:hover {border-color:#0052FF; transform:translateY(-5px);}
-        .feature-icon {font-size:35px; margin-bottom:15px;}
-        .feature h4 {font-size:20px; color:#0052FF; margin-bottom:10px; font-weight:800;}
-        .contact-wrapper {background: linear-gradient(135deg, rgba(10,37,64,0.97) 0%, rgba(0,82,255,0.97) 100%); border-radius:24px; padding:80px 60px; color:#fff; text-align:center; box-shadow:0 20px 60px rgba(0,82,255,0.25);}
-        .contact-grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; margin-bottom:30px;}
-        .contact-item {background:rgba(255,255,255,0.08); padding:40px 30px; border-radius:18px; border:1px solid rgba(255,255,255,0.15); transition:0.3s;}
-        .contact-item:hover {background:rgba(255,255,255,0.12); transform:translateY(-5px);}
-        .contact-icon {font-size:45px; margin-bottom:15px;}
-        .contact-item h4 {font-size:22px; font-weight:800; margin-bottom:10px;}
-        .contact-item p {font-size:15px; color:#E8F0FE; margin-bottom:15px;}
-        .contact-link {font-size:18px; font-weight:700; color:#fff; text-decoration:none; direction:ltr; unicode-bidi:plaintext;}
-        .contact-link:hover {color:#FFD700;}
-        .payment-badge {background:rgba(255,215,0,0.15); border:1px solid rgba(255,215,0,0.4); color:#FFD700; font-weight:800; padding:18px; border-radius:12px; margin-top:10px; font-size:16px;}
-        .footer {background:#0A2540; color:#A0AEC0; text-align:center; padding:50px 20px; font-size:15px;}
-        @media(max-width: 900px){
-            .nav-links, .nav-btn {display:none;}
-            .nav-links.active {display:flex; flex-direction:column; position:absolute; top:70px; left:0; width:100%; background:#fff; padding:20px; box-shadow:0 10px 20px rgba(0,0,0,0.1);}
-            .nav-links.active a {margin:10px 0;}
-            .menu-icon {display:block; color:#0A2540;}
-            .hero h1 {font-size:42px;}
-            .section-title {font-size:34px;}
-            .hero {padding:100px 5%;}
-            .section {padding:80px 5%;}
-            .contact-wrapper {padding:50px 30px;}
-        }
     </style>
 </head>
 <body>
 <div class="overlay">
-<div class="navbar">
-    <div class="logo">WebCraft<span>PK</span></div>
-    <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <a href="#contact" class="nav-btn">Get Free Quote</a>
-    <div class="menu-icon" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</div>
-</div>
-<div class="hero" id="home">
-    <h1>Build a Website That Wins You Customers</h1>
-    <p>We are an award-winning web design agency crafting beautiful, high-converting websites for businesses around the world.</p>
-    <div class="hero-btns">
-        <a href="#services" class="btn-primary">View Our Packages</a>
-        <a href="#contact" class="btn-outline">Talk to Our Team</a>
-    </div>
-</div>
-<div class="section" id="services">
-    <p class="section-subtitle">OUR EXPERTISE</p>
-    <h2 class="section-title">Premium Web Design Services</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="https://i.imgur.com/8Qf3bYk.jpg" class="card-img" alt="School Website">
-            <div class="card-content">
-                <h3>School & College Websites</h3>
-                <p>Complete educational portal with online admissions, teacher dashboard, event calendar, and photo gallery.</p>
-                <div class="price-wrap"><p class="old-price">Rs. 8,000</p><p class="price">Rs. 5,499</p></div>
-                <p style="font-size:14px; color:#666;">$19 USD</p>
-                <div class="payment">50% Advance | 50% After Delivery</div>
-                <a href="https://wa.me/923051739078?text=Hello%20WebCraft%20PK,%20I%20want%20School%20Website%20Package" class="btn-order btn-wa">Order on WhatsApp</a>
-                <a href="mailto:umeemuhammadarain07@gmail.com?subject=School%20Website%20Order" class="btn-order btn-mail">Order via Email</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.imgur.com/3g7nmAC.jpg" class="card-img" alt="Shop Website">
-            <div class="card-content">
-                <h3>E-Commerce & Shop Websites</h3>
-                <p>Full online store with product management, secure checkout, and direct WhatsApp order integration.</p>
-                <div class="price-wrap"><p class="old-price">Rs. 12,000</p><p class="price">Rs. 8,499</p></div>
-                <p style="font-size:14px; color:#666;">$29 USD</p>
-                <div class="payment">50% Advance | 50% After Delivery</div>
-                <a href="https://wa.me/923051739078?text=Hello%20WebCraft%20PK,%20I%20want%20Shop%20Website%20Package" class="btn-order btn-wa">Order on WhatsApp</a>
-                <a href="mailto:umeemuhammadarain07@gmail.com?subject=Shop%20Website%20Order" class="btn-order btn-mail">Order via Email</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.imgur.com/2DhmtJ8.jpg" class="card-img" alt="Salon Website">
-            <div class="card-content">
-                <h3>Salon & Barber Websites</h3>
-                <p>Stunning salon website with service menu, team profiles, photo gallery, and appointment booking.</p>
-                <div class="price-wrap"><p class="old-price">Rs. 7,000</p><p class="price">Rs. 4,499</p></div>
-                <p style="font-size:14px; color:#666;">$15 USD</p>
-                <div class="payment">50% Advance | 50% After Delivery</div>
-                <a href="https://wa.me/923051739078?text=Hello%20WebCraft%20PK,%20I%20want%20Salon%20Website%20Package" class="btn-order btn-wa">Order on WhatsApp</a>
-                <a href="mailto:umeemuhammadarain07@gmail.com?subject=Salon%20Website%20Order" class="btn-order btn-mail">Order via Email</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://i.imgur.com/5cQfYeP.jpg" class="card-img" alt="Academy Website">
-            <div class="card-content">
-                <h3>Academy & Coaching Websites</h3>
-                <p>Professional academy site with course catalog, instructor profiles, student registration, and events.</p>
-                <div class="price-wrap"><p class="old-price">Rs. 8,000</p><p class="price">Rs. 5,499</p></div>
-                <p style="font-size:14px; color:#666;">$19 USD</p>
-                <div class="payment">50% Advance | 50% After Delivery</div>
-                <a href="https://wa.me/923051739078?text=Hello%20WebCraft%20PK,%20I%20want%20Academy%20Website%20Package" class="btn-order btn-wa">Order on WhatsApp</a>
-                <a href="mailto:umeemuhammadarain07@gmail.com?subject=Academy%20Website%20Order" class="btn-order btn-mail">Order via Email</a>
-            </div>
+<div class="navbar"><div class="logo">WebCraft<span>PK</span></div></div>
+
+<div class="grid">
+    <!-- CARD 1 SCHOOL -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800" class="card-img" alt="School Website">
+        <div class="card-content">
+            <h3>School & College Websites</h3>
+            <p>Complete educational portal with online admissions.</p>
+            <p class="price">Rs. 5,499</p>
+            <a href="https://wa.me/923051739078" class="btn-order btn-wa">Order on WhatsApp</a>
         </div>
     </div>
-    <div class="why-us">
-        <p class="section-subtitle">WHY CHOOSE US</p>
-        <h2 class="section-title" style="margin-bottom:15px;">Trusted by 100+ Businesses</h2>
-        <div class="features-grid">
-            <div class="feature"><div class="feature-icon">🎨</div><h4>Premium UI/UX Design</h4><p>Modern designs that convert visitors into customers</p></div>
-            <div class="feature"><div class="feature-icon">📱</div><h4>100% Responsive</h4><p>Flawless experience on Mobile, Tablet and Desktop</p></div>
-            <div class="feature"><div class="feature-icon">⚡</div><h4>Lightning Fast</h4><p>Optimized for speed and top Google ranking</p></div>
-            <div class="feature"><div class="feature-icon">🚀</div><h4>SEO Optimized</h4><p>Get found on Google and grow your business</p></div>
+
+    <!-- CARD 2 SHOP -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9d?w=800" class="card-img" alt="Shop Website">
+        <div class="card-content">
+            <h3>E-Commerce & Shop Websites</h3>
+            <p>Full online store with product management.</p>
+            <p class="price">Rs. 8,499</p>
+            <a href="https://wa.me/923051739078" class="btn-order btn-wa">Order on WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- CARD 3 SALON -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800" class="card-img" alt="Salon Website">
+        <div class="card-content">
+            <h3>Salon & Barber Websites</h3>
+            <p>Stunning salon website with appointment booking.</p>
+            <p class="price">Rs. 4,499</p>
+            <a href="https://wa.me/923051739078" class="btn-order btn-wa">Order on WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- CARD 4 ACADEMY -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" class="card-img" alt="Academy Website">
+        <div class="card-content">
+            <h3>Academy & Coaching Websites</h3>
+            <p>Professional academy site with course catalog.</p>
+            <p class="price">Rs. 5,499</p>
+            <a href="https://wa.me/923051739078" class="btn-order btn-wa">Order on WhatsApp</a>
         </div>
     </div>
 </div>
-<div class="section" id="contact">
-    <p class="section-subtitle">GET IN TOUCH</p>
-    <h2 class="section-title">Let's Start Your Project</h2>
-    <div class="contact-wrapper">
-        <div class="contact-grid">
-            <div class="contact-item">
-                <div class="contact-icon">📱</div><h4>WhatsApp Us</h4><p>Fastest way to get a reply</p>
-                <a href="https://wa.me/923051739078" class="contact-link">+92 305 1739078</a>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon">📧</div><h4>Email Us</h4><p>Send us your requirements</p>
-                <a href="mailto:umeemuhammadarain07@gmail.com" class="contact-link">umeemuhammadarain07@gmail.com</a>
-            </div>
-        </div>
-        <div class="payment-badge">🔒 Secure Payment: 50% Advance to Start | 50% After Website Delivery</div>
-    </div>
-</div>
-<div class="footer"><p>© 2026 WebCraft PK. Premium Web Design & Development Agency. All Rights Reserved.</p></div>
+
 </div>
 </body>
 </html>
